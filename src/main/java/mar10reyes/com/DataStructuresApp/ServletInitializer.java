@@ -1,4 +1,4 @@
-package mar10reyes.com.DataStructures;
+package mar10reyes.com.DataStructuresApp;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

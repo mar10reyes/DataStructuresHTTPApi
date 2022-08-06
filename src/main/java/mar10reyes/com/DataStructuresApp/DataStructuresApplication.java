@@ -1,4 +1,4 @@
-package mar10reyes.com.DataStructures;
+package mar10reyes.com.DataStructuresApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

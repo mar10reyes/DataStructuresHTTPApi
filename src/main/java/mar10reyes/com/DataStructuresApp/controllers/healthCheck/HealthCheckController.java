@@ -1,4 +1,4 @@
-package mar10reyes.com.DataStructures.controllers;
+package mar10reyes.com.DataStructuresApp.controllers.healthCheck;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +9,7 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping({"/healthcheck"})
+@RequestMapping({"/api/v1/healthcheck"})
 public class HealthCheckController {
     @GetMapping()
     public Map<String, String> healthCheck() {
