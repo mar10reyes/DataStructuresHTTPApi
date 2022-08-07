@@ -33,11 +33,8 @@ public class LinkedListsController {
     }
 
     @GetMapping("/id")
-    public Map<String, String> getLinkedList(@PathVariable("id") long id) {
-        HashMap<String, String> statusResponse = new HashMap<>();
-        statusResponse.put("method", "get one");
-        statusResponse.put("insertedId", String.valueOf(id));
-        return statusResponse;
+    public LinkedListJpaModel getLinkedList(@PathVariable("id") long id) {
+        return linkedListCrudService.getLinkedList(id);
     }
 
     @PostMapping()
