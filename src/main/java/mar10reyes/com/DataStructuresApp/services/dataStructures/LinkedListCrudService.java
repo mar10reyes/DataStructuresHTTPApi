@@ -16,4 +16,14 @@ public class LinkedListCrudService {
     public ArrayList<LinkedListJpaModel> getAllLinkedLists() {
         return (ArrayList<LinkedListJpaModel>) linkedListRepository.findAll();
     }
+
+    public boolean createLinkedList(LinkedListJpaModel newLinkedList) {
+        try {
+            linkedListRepository.save(newLinkedList);
+        } catch (Exception e) {
+            return false;
+        }
+        
+        return true;
+    }
 }

@@ -27,12 +27,31 @@ public class LinkedListNodeJpaModel {
     private String data;
     
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "linkedlist_id")
+    @JoinColumn(name = "linkedlist_id", nullable = false)
     private LinkedListJpaModel linkedlist;
 
-    public LinkedListNodeJpaModel(long id, String data) {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
         this.data = data;
+    }
+
+    public LinkedListJpaModel getLinkedlist() {
+        return linkedlist;
+    }
+
+    public void setLinkedlist(LinkedListJpaModel linkedlist) {
+        this.linkedlist = linkedlist;
     }
 
 }
